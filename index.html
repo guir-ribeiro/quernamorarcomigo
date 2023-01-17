@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer namorar comigo?</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        container{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #botoes{
+            position: relative;
+
+        }
+
+        .botao{
+            padding: 5px 30px;
+            margin: 10px;
+            font-size: 1.5rem;
+        }
+
+        #sim{
+            background-color: green;
+            color: #fff;
+            /* position: absolute; */
+        }
+        #nao{
+            background-color: red;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <container>
+        <h1>Quer namorar comigo?</h1>
+        <div id="botoes">
+            <button class="botao" id="sim" onclick="sim()">Sim</button>
+            <button class="botao" id="nao" onclick="nao()">Não</button>
+        </div>
+    </contain>
+    
+    <script>
+        
+
+        function sim(){
+            let sim = document.querySelector('#sim');
+            sim.style.position ='absolute';
+            let top = Math.random()*200;
+            let left = Math.random()*200;
+            sim.style.top = `${top}px` ;
+            sim.style.left = `${left}px`;
+        }
+
+        function nao(){
+            alert('Acetou! mas não desanime kkk uma hora sai')
+        }
+    </script>
+
+</body>
+</html>
